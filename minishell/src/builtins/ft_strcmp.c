@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jschmitt <jschmitt@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nlence-l <nlence-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 13:49:48 by jschmitt          #+#    #+#             */
-/*   Updated: 2023/08/09 13:55:41 by jschmitt         ###   ########.fr       */
+/*   Updated: 2023/09/20 17:02:07 by nlence-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	while (*s1 != '\0' && *s2 != '\0')
+	while (*s1 != '\0' || *s2 != '\0')
 	{
 		if (*s1 < *s2)
 			return (-1);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser_utils2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nlence-l <nlence-l@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jschmitt <jschmitt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:54:43 by nlence-l          #+#    #+#             */
-/*   Updated: 2023/09/18 16:27:54 by nlence-l         ###   ########.fr       */
+/*   Updated: 2023/09/21 12:26:30 by jschmitt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,10 +102,8 @@ void	is_heredoc_sub1(t_command *res, t_prompt *p, int *index)
 {
 	clean_old_heredoc(res);
 	res->heredoc_delimiter = parse_delim_heredoc(p->tokens[*index], res);
+	g_status = 0;
 	if (heredoc(res, p))
-	{
-		g_status = 0;
 		return ;
-	}
 	(*index)++;
 }

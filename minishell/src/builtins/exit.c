@@ -6,7 +6,7 @@
 /*   By: nlence-l <nlence-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 10:28:57 by jschmitt          #+#    #+#             */
-/*   Updated: 2023/09/20 13:13:10 by nlence-l         ###   ########.fr       */
+/*   Updated: 2023/09/20 12:59:31 by nlence-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	mini_exit(t_prompt *p, t_command *cmd)
 	int	ret;
 	int	tmp;
 
-	// ft_putstr_fd("exit\n", 2);
+	ft_putstr_fd("exit\n", 2);
 	if (!cmd)
 	{
 		tmp = p->last_pipeline_status;

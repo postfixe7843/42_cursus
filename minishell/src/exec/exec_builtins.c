@@ -6,7 +6,7 @@
 /*   By: jschmitt <jschmitt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 20:12:36 by jschmitt          #+#    #+#             */
-/*   Updated: 2023/09/20 13:07:57 by jschmitt         ###   ########.fr       */
+/*   Updated: 2023/09/21 11:10:57 by jschmitt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,11 @@ static void	clean_fds(t_command *cmd)
 {
 	close_fds(cmd, 0);
 	close_fds(cmd, 1);
+	if (cmd->out_fd != -1)
+	{
+		close(cmd->out_fd);
+		cmd->out_fd = -1;
+	}
 	reset_fds(cmd);
 }
 
